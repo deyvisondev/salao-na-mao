@@ -1,0 +1,18 @@
+yarn add express morgan
+yarn add dotenv pg pg-hstore postgres
+
+
+/* caminho para criar tabelas */
+
+npx knex migrate:make create_teste_table --env development --knexfile database.js
+npx knex migrate:make create_salao_table --env development --knexfile database.js
+npx knex migrate:make create_colaborador_table --env development --knexfile database.js
+npx knex migrate:make create_servico_table --env development --knexfile database.js
+
+/* caminho para migrar as tabelas */
+npx knex migrate:latest --env development --knexfile database.js
+
+
+
+
+
